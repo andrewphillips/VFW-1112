@@ -16,15 +16,53 @@
 <div>
 	<h1>Ship This!</h1>
 	<div>
-		<p>Get your express shipping needs filled with our organizing app.</p>
+			Get your express shipping needs filled with our organizing app.
 	</div>
-		<form>
-		</form>
+	<form action="#" method="post">
+		<ul>
+			<li>
+			<fieldset>
+					<legend>Shipping Information</legend>
+					<div>
+						<ul>
+							<li>
+								<label for="package nick">(Optional) Name Package</label>
+								<input name="package nick" type="text" value="Name" />
+							</li>
+							<li>
+								<label for="date send">Ship Date</label>
+								<input name="date send" type="date" value="" />
+							</li>
+							<li>
+							<label for="package type">Package Type</label>
+							<select id="package type">
+								<option value="Envelope">Envelope</option>
+								<option value="Small Package">Small Package</option>
+								<option value="Large Package">Large Package</option>
+								<option value="Oversize Package">Oversize Package</option>
+							</select>
+							</li>
+							<li>Rush Shipping Options
+								<ul>
+									<li><input name="rushorder" type="checkbox" value="Yes" /><label for="rushorder">Rush My Shipment?</label></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+			
+			
+			</fieldset>
+			</li>
+		</ul>	
+	</form>
 </div>
 <div>
 	<ul>
-		<li></li>
+		<li><a href="#">Clear Stored Data</a></li>
+		<li><a href="#">Display Data</a></li>
 	</ul>
 </div>
+<!-- JS spot -->
+<!-- <script href="#" type = "text/javascript"></script> -->
 </body>
 </html>
