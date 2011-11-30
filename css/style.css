@@ -18,5 +18,100 @@ form{
 }
 
 fieldset{
-	border: #3e64ff 5px ridge;
+	border: #3843ff 2px ridge;
+}
+
+legend{
+	border-color: #b3b3b3;
+	border-style: none;
+	border-width: 5px;
+	text-transform: uppercase;
+	color: white;
+	background: #999999;
+	padding: 5px;
+	-moz-border-radius: 5px; 
+	border-radius: 5px;
+}
+
+header h1{
+	border-bottom-width: 2px;
+	border-bottom-style: dashed;
+	border-top-width: 2px;
+	border-top-style: dashed;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 30px;
+	margin-left: 5px;
+	background: #ff352f;
+	color: #fff;
+	padding: 5px 10px;
+	width: 210px;
+	-moz-border-radius: 5px; 
+	border-radius: 5px;
+}
+
+header p{
+	font-size: 16px;
+	padding: 0;
+	margin-left: 12px;
+}
+
+#container{
+	margin-left: 12px;
+	margin-bottom: 0;
+	margin-right: 0;
+	margin-top: 0;
+	padding-bottom: 20px;
+}
+
+#content {
+	background: #bac4d3;
+	padding: 10px
+}
+
+#gobutton{
+	padding: 7px;
+	margin: 5px;
+	border-color: #b3b3b3;
+	border-style: groove;
+	border-width: 5px;
+	text-transform: uppercase;
+	color: white;
+	background: #999999;
+	-moz-border-radius: 5px; 
+	border-radius: 5px;
+	text-decoration: none;
+}
+
+#submitbutton {
+	font-size: 14px;
+	margin: 5px;
+	padding: 7px;
+	border-color: #b3b3b3;
+	border-style: groove;
+	border-width: 5px;
+	text-transform: uppercase;
+	color: white;
+	background: #999999;
+	-moz-border-radius: 5px; 
+	border-radius: 5px;
+	text-decoration: none;
+}
+
+#footer ul {
+	float: left;
+}
+
+#footer ul li{
+	display: inline;
+	padding-right: 15px;
+}
+
+#footer ul li a{
+	color: #333;
+	text-decoration: none;
+}
+
+#footer ul li a:hover{
+	color: #ff352f;
 }
