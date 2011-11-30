@@ -1,0 +1,3 @@
+Personal repo: https://andrewphillips@github.com/andrewphillips/VFW-1112.git
+
+Public repo: git://github.com/andrewphillips/VFW-1112.git
