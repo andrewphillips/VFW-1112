@@ -8,19 +8,21 @@
 	<meta name="description" content="Get all your quick shipping needs met with our organizer. "/>
 	<meta name="robots" content="index, follow"/>
 	<meta name="viewport" content="user-scalable=no, width=divice-width"/>
+	<meta name="MobileOptimized" content="320" />
+	<meta name="HandheldFriendly" content="true" />
 	<title>Ship This - Shipping Organizer</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
 <body>
-<div>
-	<h1>Ship This!</h1>
-	<div>
-			Get your express shipping needs filled with our organizing app.
-	</div>
-	<form action="#" method="post">
-		<ul>
-			<li>
-			<fieldset>
+<div id="content">
+	<header>
+		<h1>Ship This!</h1>
+		<div>
+				<p>Get your express shipping needs filled with our organizing app.</p>
+		</div>
+	</header>
+	<form id="shippingform" action="#" method="post">
+			<fieldset id="shipfieldset">
 					<legend>Shipping Information</legend>
 					<div>
 						<ul>
@@ -82,8 +84,6 @@
 						</ul>
 					</div>
 			</fieldset>
-			</li>
-		</ul>
 			<input type="submit" value="Save Details" />
 	</form>
 </div>
