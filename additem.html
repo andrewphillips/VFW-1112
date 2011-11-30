@@ -34,13 +34,13 @@
 								<input name="date send" type="date" value="" />
 							</li>
 							<li>
-							<label for="package type">Package Type</label>
-							<select id="package type">
-								<option value="Envelope">Envelope</option>
-								<option value="Small Package">Small Package</option>
-								<option value="Large Package">Large Package</option>
-								<option value="Oversize Package">Oversize Package</option>
-							</select>
+								<label for="package type">Package Type</label>
+								<select id="package type">
+									<option value="Envelope">Envelope</option>
+									<option value="Small Package">Small Package</option>
+									<option value="Large Package">Large Package</option>
+									<option value="Oversize Package">Oversize Package</option>
+								</select>
 							</li>
 							<li>Rush Shipping Options
 								<ul>
@@ -52,7 +52,35 @@
 								<label for="numberpackages">Amount to be Shipped</label>
 								<input name="numberpackages" type="range" min="0" max="5" step="1" value="2" />
 							</li>
+							<li>
+								<label for="notes">Shipping Notes</label>
+								<textarea id="notes"></textarea>
 							</li>
+							<li>Send an "Item Shipped" notification?
+								<ul>
+									<li>
+									<input name="yesshipped" type="radio" value="Yes"/>
+									<label for="yesshipped">Yes!</label>
+									</li>
+									<li>
+									<input name="noshipped" type="radio" value="No"/>
+									<label for="noshippped">No.</label>
+									</li>
+								</ul>
+							</li>
+							<li>Update progress of shipped package?
+								<ul>
+									<li>
+									<input name="yesprogress" type="radio" value="Yes"/>
+									<label for="yesprogress">Yes!</label>
+									</li>
+									<li>
+									<input name="noprogress" type="radio" value="No"/>
+									<label for="noprogress">No thanks.</label>
+									</li>
+								</ul>
+							</li>
+							
 						</ul>
 					</div>
 			
