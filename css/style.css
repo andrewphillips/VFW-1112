@@ -1,0 +1,22 @@
+/* Andrew Phillips VFW 1112 Project 2 */
+
+body {
+	font: 14px Helvetica, Arial, Sans-serif;
+	color: #333;
+}
+
+ul{
+	list-style:none;
+}
+
+li{
+	padding: 0 0 5px;
+}
+
+form{
+	padding: 10px;
+}
+
+fieldset{
+	border: #3e64ff 5px ridge;
+}

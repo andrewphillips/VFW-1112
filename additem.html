@@ -25,16 +25,16 @@
 			<fieldset id="shipfieldset">
 					<legend>Shipping Information</legend>
 					<div>
-						<ul>
+						<ul id="packagedata">
 							<li>
 								<label for="package nick">(Optional) Name Package</label>
-								<input name="package nick" type="text" value="Name" />
+								<input name="package nick" type="text" value="" id="packagenick" />
 							</li>
 							<li>
 								<label for="date send">Ship Date</label>
-								<input name="date send" type="date" value="" />
+								<input name="date send" type="date" value="" id="datesend"/>
 							</li>
-							<li>
+							<li id="select">
 								<label for="package type">Package Type</label>
 								<select id="package type">
 									<option value="Envelope">Envelope</option>
@@ -43,40 +43,37 @@
 									<option value="Oversize Package">Oversize Package</option>
 								</select>
 							</li>
-							<li>Rush Shipping Options
-								<ul>
-									<li><input name="rushorder" type="checkbox" value="Yes" /><label for="rushorder">Expedite Shipment</label></li>
-									<li><input name="dontrush" type="checkbox" value="Yes" /><label for="dontrush">Don't Expedite Shipment</label></li>
-								</ul>
-							</lil>
+							<li>Rush Shipping Options:</li>
+								<li><input id="rushorder" name="rushorder" type="checkbox" value="Yes" /><label for="rushorder">Expedite Shipment</label></li>
+								<li><input id="dontrush" name="dontrush" type="checkbox" value="Yes" /><label for="dontrush">Don't Expedite Shipment</label></li>
 							<li>
 								<label for="numberpackages">Amount to be Shipped</label>
-								<input name="numberpackages" type="range" min="0" max="5" step="1" value="2" />
+								<input id="numberpackages" name="numberpackages" type="range" min="0" max="5" step="1" value="2" />
 							</li>
 							<li>
-								<label for="notes">Shipping Notes</label>
+								<label for="notes">Shipping Notes</label><br />
 								<textarea id="notes"></textarea>
 							</li>
-							<li>Send an "Item Shipped" notification?
+							<li><label for="itemshipped">Send an "Item Shipped" notification?</label>
 								<ul>
 									<li>
-									<input name="yesshipped" type="radio" value="Yes"/>
+									<input id="yesshipped" name="yesshipped" type="radio" value="Yes"/>
 									<label for="yesshipped">Yes!</label>
 									</li>
 									<li>
-									<input name="noshipped" type="radio" value="No"/>
+									<input id="noshipped" name="noshipped" type="radio" value="No"/>
 									<label for="noshippped">No.</label>
 									</li>
 								</ul>
 							</li>
-							<li>Update progress of shipped package?
+							<li><label for="updateshipping">Update progress of shipped package?</label> 
 								<ul>
 									<li>
-									<input name="yesprogress" type="radio" value="Yes"/>
+									<input id="yesprogress" name="yesprogress" type="radio" value="Yes"/>
 									<label for="yesprogress">Yes!</label>
 									</li>
 									<li>
-									<input name="noprogress" type="radio" value="No"/>
+									<input id="noprogress" name="noprogress" type="radio" value="No"/>
 									<label for="noprogress">No thanks.</label>
 									</li>
 								</ul>
@@ -84,13 +81,13 @@
 						</ul>
 					</div>
 			</fieldset>
-			<input type="submit" value="Save Details" />
+			<input type="submit" value="Save Details" id="submitbutton" />
 	</form>
 </div>
-<div>
+<div id="footer">
 	<ul>
-		<li><a href="#">Clear Stored Data</a></li>
-		<li><a href="#">Display Data</a></li>
+		<li><a id="cleardatalink" href="#">Clear Stored Data</a></li>
+		<li><a id="displaydatalink" href="#">Display Data</a></li>
 	</ul>
 </div>
 <script href="js/main.js" type = "text/javascript"></script>
