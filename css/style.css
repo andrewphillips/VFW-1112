@@ -107,11 +107,12 @@ header p{
 	padding-right: 15px;
 }
 
+#footer ul li a:hover{
+	color: #ff352f;
+}
+
 #footer ul li a{
 	color: #333;
 	text-decoration: none;
 }
 
-#footer ul li a:hover{
-	color: #ff352f;
-}
