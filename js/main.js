@@ -3,6 +3,13 @@
 //Wait until the DOM is ready.
 window.addEventListener("DOMContentLoaded", function() {  
 
+// Variable defaults
+	var packageCat = [":: Choose a Size ::", "Envelope", "Small Package", "Large Package", "Oversize Package"];
+	var	shipNotifyValue;
+	var	bringValues;
+	var	progressNotifyValue;
+	
+	
 	//getElementById Function
 	function $(x){
 		var theElement = document.getElementById(x);
@@ -35,9 +42,9 @@ window.addEventListener("DOMContentLoaded", function() {
 	}
 	
 	function getSelectedProgressRadio(){
-		var ProgressRadio = document.forms[0].progressNotify;
-		for(var i=0; i<ProgressRadio.length; i++){
-			if(ProgressRadio[i].checked){
+		var progressRadio = document.forms[0].progressNotify;
+		for(var i=0; i<progressRadio.length; i++){
+			if(progressRadio[i].checked){
 				progressNotifyValue = progressRadio[i].value;
 			}
 		}
@@ -144,14 +151,6 @@ window.addEventListener("DOMContentLoaded", function() {
 		}
 	} 
 
-	// Variable defaults
-	var packageCat = [":: Choose a Size ::", "Envelope", "Small Package", "Large Package", "Oversize Package"];
-	var	shipNotifyValue;
-	var	bringValues;
-	var	progressNotifyValue;
-
-	makeCats();
-	
 
 	//Set click events
 	var displayLink = $("displaydatalink");
@@ -160,5 +159,8 @@ window.addEventListener("DOMContentLoaded", function() {
 	clearLink.addEventListener("click", clearLocal); 
 	var submit = $("submitbutton");
 	submit.addEventListener("click", storeData);
+	
+	//call cats!
+	makeCats();
 
 });
