@@ -33,6 +33,7 @@ window.addEventListener("DOMContentLoaded", function() {
 			}
 		}
 	}
+	
 	function getSelectedProgressRadio(){
 		var ProgressRadio = document.forms[0].progressNotify;
 		for(var i=0; i<ProgressRadio.length; i++){
@@ -41,6 +42,7 @@ window.addEventListener("DOMContentLoaded", function() {
 			}
 		}
 	}
+	
 	//Find value of selected checkboxes
 	function getRushValue(){
 		if($('rushorder').checked){
@@ -105,6 +107,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		if(localStorage.length === 0){
 		alert("There is no data in local storage.");
 	}
+	
 	//Write Data from Local Storage to the browser.
 		var makeDiv = document.createElement('div');
 		makeDiv.setAttribute("id", "items");
@@ -144,14 +147,15 @@ window.addEventListener("DOMContentLoaded", function() {
 	// Variable defaults
 	var packageCat = [":: Choose a Size ::", "Envelope", "Small Package", "Large Package", "Oversize Package"];
 	var	shipNotifyValue;
-	var	progressNotifyValue;
 	var	bringValues;
+	var	progressNotifyValue;
+
 	makeCats();
 	
 
 	//Set click events
 	var displayLink = $("displaydatalink");
-	displayLink.addEventListener("click", getData)			
+	displayLink.addEventListener("click", getData);			
 	var clearLink = $("cleardatalink");
 	clearLink.addEventListener("click", clearLocal); 
 	var submit = $("submitbutton");
