@@ -180,8 +180,8 @@ window.addEventListener("DOMContentLoaded", function() {
 		toggleControls("off");
 		
 		//populate with existing data
-		$('packagenick').value = item.name[1];
-		$('datesend').value = item.date[1];
+		$('packagenick').value = item.packagenick[1];
+		$('datesend').value = item.datesend[1];
 		$('groups').value = item.category[1];
 		if (item.rushorder[1] === "Yes"){
 			$('rushValues').setAttribute("checked", "checked");
@@ -214,9 +214,9 @@ window.addEventListener("DOMContentLoaded", function() {
 		//Remove the initial listener from the input save contact button
 		submit.removeEventListener("click", storeData);
 		//Change value submit >> edit
-		$('submit').value = "Edit Shipment";
-		var editSubmit = $("submit");
-		editSubmit.addEventListener("click", validate);
+		$('submitbutton').value = "Edit Shipment";
+		var editSubmit = $("submitbutton");
+		editSubmit.addEventListener("click", getData);
 		editSubmit.key = this.key;
 
 	}
