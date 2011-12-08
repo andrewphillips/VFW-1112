@@ -53,11 +53,11 @@ header h1{
 header p{
 	font-size: 16px;
 	padding: 0;
-	margin-left: 12px;
+	margin-left: 8px;
 }
 
 #container{
-	margin-left: 12px;
+	margin-left: 10px;
 	margin-bottom: 0;
 	margin-right: 0;
 	margin-top: 0;
@@ -66,7 +66,7 @@ header p{
 
 #content {
 	background: #bac4d3;
-	padding: 10px
+	padding: 5px
 }
 
 #gobutton{
@@ -99,7 +99,7 @@ header p{
 }
 
 #footer ul {
-	float: left;
+	float: none;
 }
 
 #footer ul li{
