@@ -1,4 +1,4 @@
-/* Andrew Phillips VFW 1112 Project 2 */
+/* Andrew Phillips VFW 1112 Project 3 */
 
 //Wait until the DOM is ready.
 window.addEventListener("DOMContentLoaded", function() {  

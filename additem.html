@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- Author: Andrew Philips -->
-<!-- VFW 1112 :: Project 2 -->
+<!-- VFW 1112 :: Project 3 -->
 <html>
 <head>
 	<meta charset="utf-8"/>
@@ -18,64 +18,64 @@
 	<header>
 		<h1>Ship This!</h1>
 		<div>
-				<p>Get your express shipping needs filled with our organizing app.</p>
+			<p>Get your express shipping needs filled with our organizing app.</p>
 		</div>
 	</header>
 	<form id="shippingform" action="#" method="post">
-			<fieldset id="shipfieldset">
-					<legend>Shipping Information</legend>
-					<div>
-						<ul id="packagedata">
-							<li>
-								<label for="packagenick">(Optional) Name Package</label>
-								<input name="packagenick" type="text" value="" id="packagenick" />
-							</li>
-							<li>
-								<label for="datesend">Ship Date</label>
-								<input name="datesend" type="date" value="" id="datesend"/>
-							</li>
-							<li id="select">
-								<label for="category">Package Type</label>
-							</li>
-							<li>Rush Shipping Options:</li>
-								<li><input id="rushorder" name="rushorder" type="checkbox" value="Yes" /><label for="rushorder">Expedite Shipment</label></li>
-								<li><input id="dontrush" name="dontrush" type="checkbox" value="Yes" /><label for="dontrush">Don't Expedite Shipment</label></li>
-							<li>
-								<label for="numberpackages">Amount to be Shipped</label>
-								<input id="numberpackages" name="numberpackages" type="range" min="0" max="5" step="1" value="2" />
-							</li>
-							<li>
-								<label for="notes">Shipping Notes</label><br />
-								<textarea id="notes"></textarea>
-							</li>
-							<li><label for="itemshipped">Send an "Item Shipped" notification?</label>
-								<ul>
-									<li>
-									<input id="yesshipped" name="shipNotify" type="radio" value="Yes"/>
-									<label for="yesshipped">Yes!</label>
-									</li>
-									<li>
-									<input id="noshipped" name="shipNotify" type="radio" value="No"/>
-									<label for="noshipped">No.</label>
-									</li>
-								</ul>
-							</li>
-							<li><label for="updateshipping">Update progress of shipped package?</label> 
-								<ul>
-									<li>
-									<input id="yesprogress" name="progressNotify" type="radio" value="Yes"/>
-									<label for="yesprogress">Yes!</label>
-									</li>
-									<li>
-									<input id="noprogress" name="progressNotify" type="radio" value="No"/>
-									<label for="noprogress">No thanks.</label>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-			</fieldset>
-			<input type="submit" value="Save Details" id="submitbutton" />
+		<fieldset id="shipfieldset">
+			<legend>Shipping Information</legend>
+				<div>
+					<ul id="packagedata">
+						<li>
+						<label for="packagenick">(Optional) Name Package</label>
+						<input name="packagenick" type="text" value="" id="packagenick" />
+						</li>
+						<li>
+						<label for="datesend">Ship Date</label>
+						<input name="datesend" type="date" value="" id="datesend"/>
+						</li>
+						<li id="select">
+						<label for="category">Package Type</label>
+						</li>
+						<li>Rush Shipping Options:</li>
+						<li><input id="rushorder" name="rushorder" type="checkbox" value="Yes" /><label for="rushorder">Expedite Shipment</label></li>
+						<li><input id="dontrush" name="dontrush" type="checkbox" value="Yes" /><label for="dontrush">Don't Expedite Shipment</label></li>
+						<li>
+						<label for="numberpackages">Amount to be Shipped</label>
+						<input id="numberpackages" name="numberpackages" type="range" min="0" max="5" step="1" value="2" />
+						</li>
+						<li>
+						<label for="notes">Shipping Notes</label><br />
+						<textarea id="notes"></textarea>
+						</li>
+						<li><label for="itemshipped">Send an "Item Shipped" notification?</label>
+							<ul>
+								<li>
+								<input id="yesshipped" name="shipNotify" type="radio" value="Yes"/>
+								<label for="yesshipped">Yes!</label>
+								</li>
+								<li>
+								<input id="noshipped" name="shipNotify" type="radio" value="No"/>
+								<label for="noshipped">No.</label>
+								</li>
+							</ul>
+						</li>
+						<li><label for="updateshipping">Update progress of shipped package?</label> 
+							<ul>
+								<li>
+								<input id="yesprogress" name="progressNotify" type="radio" value="Yes"/>
+								<label for="yesprogress">Yes!</label>
+								</li>
+								<li>
+								<input id="noprogress" name="progressNotify" type="radio" value="No"/>
+								<label for="noprogress">No thanks.</label>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+		</fieldset>
+		<input type="submit" value="Save Details" id="submitbutton" />
 	</form>
 </div>
 <div id="footer">
