@@ -120,7 +120,7 @@ window.addEventListener("DOMContentLoaded", function() {
 			item.progressNotify	 	= ["Update progress of shipped package?", progressNotifyValue];
 	
 		localStorage.setItem(id, JSON.stringify(item));
-		alert("Item(s) ready to ship!");
+		alert("Item(s) added to shipping list!");
 	}
 	
 	function validate(e){
