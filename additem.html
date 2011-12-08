@@ -21,6 +21,7 @@
 			<p>Get your express shipping needs filled with our organizing app.</p>
 		</div>
 	</header>
+	<ul id="errors"></ul>
 	<form id="shippingform" action="#" method="post">
 		<fieldset id="shipfieldset">
 			<legend>Shipping Information</legend>
@@ -48,7 +49,7 @@
 						<label for="notes">Shipping Notes</label><br />
 						<textarea id="notes"></textarea>
 						</li>
-						<li><label for="itemshipped">Send an "Item Shipped" notification?</label>
+						<li><label for="shipNotify">Send an "Item Shipped" notification?</label>
 							<ul>
 								<li>
 								<input id="yesshipped" name="shipNotify" type="radio" value="Yes"/>
@@ -60,7 +61,7 @@
 								</li>
 							</ul>
 						</li>
-						<li><label for="updateshipping">Update progress of shipped package?</label> 
+						<li><label for="progressNotify">Update progress of shipped package?</label> 
 							<ul>
 								<li>
 								<input id="yesprogress" name="progressNotify" type="radio" value="Yes"/>

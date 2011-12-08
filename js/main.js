@@ -146,16 +146,17 @@ window.addEventListener("DOMContentLoaded", function() {
 			getPackageNick.style.border = "1px solid red";
 			messageAry.push(packageError);
 		}
-		if(getCategoryName.value === "Pick a Package Category"){
-			var categoryError = "Please choose a category.";
-			getCategoryName.style.border = "1px solid red";
-			messageAry.push(categoryError);
-		}
 		if(getShipDate.value === ""){
 			var dateError = "Please enter a date.";
 			getShipDate.style.border = "1px solid red";
 			messageAry.push(dateError);
 		}
+		if(getCategoryName.value === ":: Choose a Size ::"){
+			var categoryError = "Please choose a category.";
+			getCategoryName.style.border = "1px solid red";
+			messageAry.push(categoryError);
+		}
+		
 		
 		// if there were errors, display on screen
 		if(messageAry.length >= 1){
@@ -184,12 +185,11 @@ window.addEventListener("DOMContentLoaded", function() {
 		$('datesend').value = item.datesend[1];
 		$('groups').value = item.category[1];
 		if (item.rushorder[1] === "Yes"){
-			$('rushValues').setAttribute("checked", "checked");
+		$('rushorder').setAttribute("checked", "checked");
 		}
-		if (item.dontrush [1] === "Yes"){
-			$('dontRushValues').setAttribute("checked", "checked");
-		}
-		
+		if (item.dontrush[1] === "Yes"){
+		$('dontrush').setAttribute("checked", "checked");
+		}		
 		$('numberpackages').value = item.numberpackages[1];
 		$('notes').value = item.notes[1];
 		var shipRadios = document.forms[0].shipNotify;
@@ -210,16 +210,14 @@ window.addEventListener("DOMContentLoaded", function() {
 				}
 			}
 
-		
 		//Remove the initial listener from the input save contact button
 		submit.removeEventListener("click", storeData);
 		//Change value submit >> edit
 		$('submitbutton').value = "Edit Shipment";
 		var editSubmit = $("submitbutton");
-		editSubmit.addEventListener("click", getData);
+		editSubmit.addEventListener("click", validate);
 		editSubmit.key = this.key;
-
-	}
+		}
 
 	function makeItemLinks(key, linksLi){
 		//add edit single item link
@@ -304,7 +302,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	//Set click events
 	displayLink.addEventListener("click", getData);			
 	clearLink.addEventListener("click", clearLocal); 
-	submit.addEventListener("click", storeData);
+	submit.addEventListener("click", validate);
 	
 	//call cats!
 	makeCats();
