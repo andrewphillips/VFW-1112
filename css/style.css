@@ -116,3 +116,7 @@ header p{
 	text-decoration: none;
 }
 
+#errors {
+	color: #ff0000;
+}
+
