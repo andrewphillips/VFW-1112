@@ -123,6 +123,14 @@ window.addEventListener("DOMContentLoaded", function() {
 		alert("Item(s) added to shipping list!");
 	}
 	
+	function getImage(imageName, makeSubList){
+		var imageLi = document.createElement('li');
+		makeSubList.appendChild(imageLi);
+		var newImage = document.createElement('img');
+		var setSrc = newImage.setAttribute("src", "images/" + imageName + ".png");
+		imageLi.appendChild(newImage);	
+	}
+	
 	function validate(e){
 		//Elements we want to check
 		var getPackageNick = $("packagenick");
