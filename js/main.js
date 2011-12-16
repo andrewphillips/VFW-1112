@@ -1,4 +1,4 @@
-/* Andrew Phillips VFW 1112 Project 3 */
+/* Andrew Phillips VFW 1112 Project 4 */
 
 //Wait until the DOM is ready.
 window.addEventListener("DOMContentLoaded", function() {  
@@ -140,7 +140,7 @@ window.addEventListener("DOMContentLoaded", function() {
 				"rushorder": ["Expedite Shipment:", "Yes"],
 				"dontrush": ["Don't Expedite Shipment:", "No"],
 				"numberpackages": ["Amount to be Shipped:", "1"],
-				"notes": ["Notes", "Here are the CDs you left at my house!"],
+				"notes": ["Shipping Notes", "Here are the CDs you left at my house!"],
 				"shipNotify": ["Send an \'Item Shipped\' notification?", "Yes"],
 				"progressNotify": ["Update progress of shipped package?", "Yes"]
 			},
@@ -151,12 +151,11 @@ window.addEventListener("DOMContentLoaded", function() {
 					"rushorder": ["Expedite Shipment:", "No"],
 					"dontrush": ["Don't Expedite Shipment:", "Yes"],
 					"numberpackages": ["Amount to be Shipped:", "2"],
-					"notes": ["Notes", "Here are the two payments you requested."],
+					"notes": ["Shipping Notes", "Here are the two payments you requested."],
 					"shipNotify": ["Send an \'Item Shipped\' notification?", "No"],
 					"progressNotify": ["Update progress of shipped package?", "Yes"]
-				},
-		}
-	};
+				}
+		};
 	
 	//Store the JSON object into Local Storage
 		for (var n in json){
@@ -296,25 +295,23 @@ window.addEventListener("DOMContentLoaded", function() {
 	}
 	
 		function getRangeValue() {
-	var f = document.forms[0],
-		range = f['numberpackages'],
-		result = f['result'],
-		cachedRangeValue = localStorage.rangeValue ? localStorage.rangeValue : 5; 
-
-		range.value = cachedRangeValue;
-		result.value = cachedRangeValue;
-
-		// Display chosen value when sliding.
-		range.addEventListener("change", function() {
-			result.value = range.value;
-		}, false);
+			var f = document.forms[0],
+			range = f['numberpackages'],
+			result = f['result'],
+			cachedRangeValue = localStorage.rangeValue ? localStorage.rangeValue : 5; 
+	
+			range.value = cachedRangeValue;
+			result.value = cachedRangeValue;
+	
+			// Display chosen value when sliding.
+			range.addEventListener("change", function() {
+				result.value = range.value;
+			}, false);
 	}
 	
 	function getData(){
 		toggleControls("on");
 		if(localStorage.length === 0){
-		alert("There is no data in local storage.");
-		
 		//From week 4's material
 		autoFillData();
 		getRangeValue();
@@ -362,6 +359,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	} 
 
 
+
 	//Set click events
 	displayLink.addEventListener("click", getData);			
 	clearLink.addEventListener("click", clearLocal); 
@@ -370,5 +368,6 @@ window.addEventListener("DOMContentLoaded", function() {
 	//call cats!
 	getRangeValue();
 	makeCats();
+	
 
 });
