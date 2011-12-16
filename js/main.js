@@ -131,6 +131,40 @@ window.addEventListener("DOMContentLoaded", function() {
 		imageLi.appendChild(newImage);	
 	}
 	
+	function autoFillData(){
+		var json = {
+			"package1": {
+				"packagenick": ["Package Name:", "Tim's CDs"],
+				"datesend": ["Ship Date:", "12-15-2011"],
+				"category": ["Package Type:", "Small Package"],
+				"rushorder": ["Expedite Shipment:", "Yes"],
+				"dontrush": ["Don't Expedite Shipment:", "No"],
+				"numberpackages": ["Amount to be Shipped:", "1"],
+				"notes": ["Notes", "Here are the CDs you left at my house!"],
+				"shipNotify": ["Send an \'Item Shipped\' notification?", "Yes"],
+				"progressNotify": ["Update progress of shipped package?", "Yes"]
+			},
+			"package2": {
+					"packagenick": ["Package Name:", "Payment for Laura"],
+					"datesend": ["Ship Date:", "12-10-2011"],
+					"category": ["Package Type:", "Envelope"],
+					"rushorder": ["Expedite Shipment:", "No"],
+					"dontrush": ["Don't Expedite Shipment:", "Yes"],
+					"numberpackages": ["Amount to be Shipped:", "2"],
+					"notes": ["Notes", "Here are the two payments you requested."],
+					"shipNotify": ["Send an \'Item Shipped\' notification?", "No"],
+					"progressNotify": ["Update progress of shipped package?", "Yes"]
+				},
+		}
+	};
+	
+	//Store the JSON object into Local Storage
+		for (var n in json){
+			var id = Math.floor(Math.random() * 100000001);
+			localStorage.setItem(id, JSON.stringify(json[n]));
+		}
+	}
+	
 	function validate(e){
 		//Elements we want to check
 		var getPackageNick = $("packagenick");
@@ -261,12 +295,31 @@ window.addEventListener("DOMContentLoaded", function() {
 		linksLi.appendChild(deleteLink);
 	}
 	
+		function getRangeValue() {
+	var f = document.forms[0],
+		range = f['numberpackages'],
+		result = f['result'],
+		cachedRangeValue = localStorage.rangeValue ? localStorage.rangeValue : 5; 
 
+		range.value = cachedRangeValue;
+		result.value = cachedRangeValue;
+
+		// Display chosen value when sliding.
+		range.addEventListener("change", function() {
+			result.value = range.value;
+		}, false);
+	}
+	
 	function getData(){
 		toggleControls("on");
 		if(localStorage.length === 0){
 		alert("There is no data in local storage.");
-	}
+		
+		//From week 4's material
+		autoFillData();
+		getRangeValue();
+		alert("There is no data in local storage so default data was added.");
+		}
 	
 	//Write Data from Local Storage to the browser.
 		var makeDiv = document.createElement('div');
@@ -285,6 +338,8 @@ window.addEventListener("DOMContentLoaded", function() {
 			var obj = JSON.parse(value);
 			var makeSubList = document.createElement('ul');
 			makeli.appendChild(makeSubList);
+			//Week 4 again
+			getImage(obj.category[1], makeSubList); //gets image icon from the local storage
 			for(var n in obj){
 			var makeSubLi = document.createElement('li');
 				makeSubList.appendChild(makeSubLi);
@@ -313,6 +368,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	submit.addEventListener("click", validate);
 	
 	//call cats!
+	getRangeValue();
 	makeCats();
 
 });
