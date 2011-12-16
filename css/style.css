@@ -154,33 +154,38 @@ header p{
 #gobutton{
 	padding:5px 10px;
 	background: #ffa84c; /* Old browsers */
-	background: -moz-linear-gradient(top, #881d1a 0%, #ff352f 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#881d1a), color-stop(100%,#ff352f)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #881d1a 0%,#ff352f 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #881d1a 0%,#ff352f 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #881d1a 0%,#ff352f 100%); /* IE10+ */
-	background: linear-gradient(top, #881d1a 0%,#ff352f 100%); /* W3C */
+	background: -moz-linear-gradient(top, #ff352f 0%, #ff352f 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff352f), color-stop(100%,#ff352f)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ff352f 0%,#ff352f 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ff352f 0%,#ff352f 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ff352f 0%,#ff352f 100%); /* IE10+ */
+	background: linear-gradient(top, #ff352f 0%,#ff352f 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#881d1a', endColorstr='#ff352f',GradientType=0 ); /* IE6-9 */
 	color: #fff;
 	border: 0;
 	font-size: 14px;
 	-moz-border-radius: 5px; 
 	border-radius: 5px;
-	margin: 10px 0 0 20px;}
+	margin: 10px 0 0 20px;
+}
 
 #submitbutton {
+	padding:5px 10px;
+	background: #ffa84c; /* Old browsers */
+	background: -moz-linear-gradient(top, #ff352f 0%, #ff352f 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff352f), color-stop(100%,#ff352f)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ff352f 0%,#ff352f 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ff352f 0%,#ff352f 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ff352f 0%,#ff352f 100%); /* IE10+ */
+	background: linear-gradient(top, #ff352f 0%,#ff352f 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff352f', endColorstr='#ff352f',GradientType=0 ); /* IE6-9 */
+	color: #fff;
+	border: 0;
 	font-size: 14px;
-	margin: 5px;
-	padding: 7px;
-	border-color: #b3b3b3;
-	border-style: groove;
-	border-width: 5px;
-	text-transform: uppercase;
-	color: white;
-	background: #999999;
 	-moz-border-radius: 5px; 
 	border-radius: 5px;
-	text-decoration: none;
+	margin: 10px 0 0 20px;
+	text-transform: uppercase;
 }
 
 #footer ul {
